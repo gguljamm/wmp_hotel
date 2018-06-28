@@ -1,10 +1,12 @@
 <template>
-  <div>붘</div>
+  <div>
+    원더페이~~~
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'wrapper'
+  name: 'bookWrapper'
 }
 </script>
 
