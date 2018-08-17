@@ -1,3 +1,179 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><meta name=mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-capable content=yes><title>wonder-hotel</title><link href=static/css/app.b37d9851bc69d070ccac3417103df0a2.css rel=stylesheet></head><style>body{
+<!DOCTYPE html><html><head><meta charset=UTF-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><meta name=mobile-web-app-capable content=yes><meta name=apple-mobile-web-app-capable content=yes><meta http-equiv=Content-Type content="text/html; charset=utf-8"><meta name=format-detection content="telephone=no"><title>원더호텔</title><link rel="shortcut icon" href=https://air.wonderscdn.app/images/common/favicon.ico><style>.before_air_loading_page {position:fixed;top:0;left:0;width:100%;height:100%;font-size:13px;line-height:16px;color:#aaa;background-color:rgba(0, 0, 0, .7);z-index:9999;}
+    .before_air_loading_page .box_inner {position:absolute;top:50%;left:0;width:100%;margin-top:-58px;text-align:center;}
+    .before_air_loading_page .box_inner .t_gr1 {font-size:18px;line-height:21px;padding-top:20px;}
+    .before_air_loading_page .box_inner .t_gr1 span {color:#25B8CB;}
+    .before_air_loading_page .box_inner .t_gr2 {padding-top:7px;}
+
+    .index_div .blind {
+      display:none !important;
+    }
+    .index_div .blind-text {
+      font-size:0;
+      line-height:0;
+      color:transparent;
+    }
+    .index_div a {
+      color:#000;
+      cursor:pointer;
+      text-decoration:none;
+      -webkit-user-select:none;
+    }
+    .index_div .header {
+      min-height:57px;
+      transition:all 0.3s ease;
+      z-index:1000;
+      position:fixed;
+      top:0;
+      left: 0;
+      width:100%;
+      background:#1a1a1c;
+    }
+    .index_div .header .title {
+      color:#fff;
+      font-weight:600;
+      font-size:20px;
+      line-height:30px;
+      text-align:center;
+    }
+
+    .index_div .header .btn-close {
+      position:fixed;
+      display:none;
+      right:0;
+      top:0;
+      color:#fff;
+      width:57px;
+      height:57px;
+      font-size:16px;
+      line-height:30px;
+      text-align:center;
+      padding:0;
+      border:0;
+      background:none;
+    }
+    .index_div .container {
+      position:absolute;
+      top:57px;
+      left:0;
+      width:100%;
+      height:100%;
+      color: #535353;
+      text-align: center;
+      display:table;
+      z-index: 9999;
+      background-color: #fff;
+    }
+    .index_div .container .content {
+      display:table-cell;
+      vertical-align:middle;
+    }
+    .index_div .container strong {
+      display:block;
+      padding:83px 0 0;
+      font-size:17px;
+      color:#000;
+      font-weight:600;
+      background: url('https://air.wonderscdn.app/images/common/ico_not_support_device.png') no-repeat 50% 0;
+      background-size:128px auto;
+    }
+    .index_div .container .message {
+      margin: 13px 0 0;
+      color: #a3a3a3;
+      font-size: 14px;
+    }
+    .index_div .container .message:first-child {
+      margin-top:0;
+    }
+    .index_div .container .device {
+      margin:7px 10px 0;
+      font-size:11px;
+      line-height:14px;
+      text-align:center;
+      color:#a3a3a3;
+    }
+    body{
       margin: 0;
-    }</style><body><div style="height: 50px; background-color: #262628; width: 100%; text-align: center; font-size: 20px; line-height: 50px; color: #FFF; position: fixed; top: 0; left: 0; z-index: 3;">원더투어 호텔</div><div id=wonderHotel></div><script type=text/javascript src=static/js/manifest.2ae2e69a05c33dfc65f8.js></script><script type=text/javascript src=static/js/vendor.a422d9619041bbecfb3e.js></script><script type=text/javascript src=static/js/app.620a107484c9d442f150.js></script></body></html>
+    }
+    #beforeLoading2{
+      background-color: #000;
+      display: none;
+    }</style><script type=text/javascript src=//developers.kakao.com/sdk/js/kakao.min.js></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','gtm','GTM-5T7TMHJ');</script><script type=text/javascript>function supportCheck() {
+      var support = true;
+      var userAgent = navigator.userAgent.toLowerCase();
+
+      var pUserAgentString = navigator.userAgent;
+      var lUaMatches = pUserAgentString.match(/(.*?)\/(.*?)\s\((.*?)\)(.*)/i);
+
+      console.log(lUaMatches);
+
+      if (lUaMatches != '' && lUaMatches != null && lUaMatches != undefined) {
+        console.log('탐');
+        var key = lUaMatches[3];
+        var matches = '';
+        var osVersion = '';
+        var compareVersion = '';
+        if (key.match(/iPhone\sOS\s([0-9]+)_([0-9]+)_?([0-9]+)?/i)) { // ios 11.0
+          matches = key.match(/iPhone\sOS\s([0-9]+)_([0-9]+)_?([0-9]+)?/i);
+          compareVersion = '11.0';
+        } else if (key.match(/iPad;\sCPU\sOS\s([0-9]+)_([0-9]+)_?([0-9]+)?/i)) { // ios 11.0
+          matches = key.match(/iPad;\sCPU\sOS\s([0-9]+)_([0-9]+)_?([0-9]+)?/i);
+          compareVersion = '11.0';
+        } else if (key.match(/Android\s([0-9]+)\.([0-9]+)\.?([0-9]+)?/i)) { // android 5.0
+          matches = key.match(/Android\s([0-9]+)\.([0-9]+)\.?([0-9]+)?/i);
+          compareVersion = '5.0';
+        } else { // PC 일때만 체크
+          if (userAgent.indexOf("chrome") >= 0) {
+          } else if(userAgent.indexOf("msie") >= 0 || userAgent.indexOf("touch") >= 0 || userAgent.indexOf("rv:11.0") >= 0 || userAgent.indexOf("edge/12.0") >= 0 || userAgent.indexOf("trident") >= 0) {
+            support = false;
+          } else if (userAgent.indexOf("safari") >= 0 && userAgent.indexOf("windows") >= 0) {
+            support = false;
+          }
+        }
+
+        console.log(matches);
+        console.log(compareVersion);
+
+        if (matches != '') {
+          osVersion = matches.slice(1, 4).filter(function(x) { return x; }).join('.');
+          console.log(osVersion);
+          if (osVersion) {
+            if (convertOsVersion(osVersion) < convertOsVersion(compareVersion)) {
+              support = false;
+            }
+          }
+        } else {
+          console.log('매치 안탐');
+        }
+
+        if (!support) {
+          document.getElementById('notSupport').style.display = 'block';
+          document.getElementById('beforeLoading').style.display = 'none';
+        }
+      } else {
+        console.log('안탐');
+      }
+    }
+
+    function convertOsVersion (osVersion) {
+      if (!osVersion) {
+        return osVersion;
+      }
+      var inVersionArray = "";
+      if (osVersion.split('.') != null) {
+        inVersionArray = osVersion.split('.');
+      } else {
+        inVersionArray = [osVersion];
+      }
+      console.log('inVersionArray : ' + inVersionArray);
+      var inMajor = Number(inVersionArray[0]);
+      var inSub = [];
+      if(inVersionArray.length > 1){
+        inSub = '0.' + (inVersionArray.splice(1, inVersionArray.length - 1)).join().replace(/,/gi,'');
+      }
+      // console.log(inVersionArray, inSub)
+      return inMajor + (Number(inSub));
+    }</script><link href=/static/css/app.7d0643f1a162ffa2fc67d7580576a492.css rel=stylesheet></head><body onload=supportCheck()><div class="air_ly_full index_div" id=notSupport style="display: none"><div class=header><h1 class=title>안타깝네요!</h1></div><div class=container><div class=content><strong>안타깝네요!</strong><p class=message>해당 브라우저/폰의 버전이 낮아<br>서비스를 이용할 수 없습니다.<br><br>PC환경을 준비하고 있으며,<br>그 전까지는 윈도우PC의 특정 브라우저<br>(IE, Safari)에서는 사용이 불가능 합니다.<br><br>원더호텔을 이용해 주셔서 감사합니다.</p><p class=device id=closeDiv style="font-size: 20px;"><br><br><a href="wemakeprice://doEvent?cmd=close">닫기</a></p></div></div></div><div class=before_air_loading_page id=beforeLoading2><div class=box_inner><p><img src=https://air.wonderscdn.app/images/common/loading_img.gif alt=""></p><p class=t_gr1><span>당신의 원더랜드</span>를 찾는 중이에요</p><p class=t_gr2>잠시만 기다려주세요</p></div></div><div class=before_air_loading_page id=beforeLoading><div class=box_inner><p><img src=https://air.wonderscdn.app/images/common/loading_img.gif alt=""></p><p class=t_gr1><span>당신의 원더랜드</span>를 찾는 중이에요</p><p class=t_gr2>잠시만 기다려주세요</p></div></div><div id=wonderHotel></div><script type=text/javascript src=/static/js/manifest.2ae2e69a05c33dfc65f8.js></script><script type=text/javascript src=/static/js/vendor.4cd365c435286a81de9b.js></script><script type=text/javascript src=/static/js/app.b9a0d9f3f3bf33d7cd19.js></script></body></html>
