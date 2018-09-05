@@ -351,6 +351,7 @@ export default {
         this.recentList[index].room
       ]
       this.$emit('reset-filter-info')
+      this.clearWaterfallState()
       this.$router.push(
         `/hotelList/${param.join('/')}${window.location.search}${window.location.hash}`
       )
