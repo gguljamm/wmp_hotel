@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="174" height="74" viewBox="0 0 174 74">
+    <defs>
+        <rect id="b" width="150" height="50" x="12" y="12" rx="25"/>
+        <filter id="a" width="113.3%" height="140%" x="-6.7%" y="-16%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="3"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.822810374 0 0 0 0 0.675439422 0 0 0 0 0.583830451 0 0 0 1 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <rect width="174" height="74" fill="#FFF" opacity=".15" rx="37"/>
+        <rect width="162" height="62" x="6" y="6" fill="#FFF" opacity=".15" rx="31"/>
+        <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+        <use fill="#FFF" xlink:href="#b"/>
+        <text fill="#B18E79" font-family="AppleSDGothicNeo-Medium, Apple SD Gothic Neo" font-size="20" font-weight="400" letter-spacing="-.615">
+            <tspan x="71.315" y="43">검색</tspan>
+        </text>
+        <path fill="#B18E79" d="M31.796 27l-4.94 4.967v6.305l4.94 4.966h6.272l1.756-1.765L45.323 47l1.427-1.435-5.498-5.527 1.756-1.766v-6.305L38.068 27h-6.272zm-2.92 10.432v-4.625l3.756-3.776h4.6l3.757 3.776v4.625l-3.757 3.776h-4.6l-3.756-3.776z"/>
+    </g>
+</svg>

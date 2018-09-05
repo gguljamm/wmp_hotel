@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
+    <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="1.2">
+        <path stroke-linejoin="bevel" d="M6.341.324L4.687 2.82v14.13M14.61.324l1.655 2.495v14.13"/>
+        <path d="M4.687 5.416h11.578M4.687 9.572h11.578M4.687 13.73h11.578M.553 16.404v1.093l1.937 1.947h2.74l1.938-1.947v-1.093M7.168 16.404v1.093l1.937 1.947h2.74l1.94-1.947v-1.093"/>
+        <path d="M13.784 16.404v1.093l1.937 1.947h2.74l1.938-1.947v-1.093"/>
+    </g>
+</svg>
