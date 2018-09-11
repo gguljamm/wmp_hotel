@@ -41,7 +41,7 @@
 
 <script>
 import Format from '../../util/format'
-import Api from '../../api/api'
+import Api from '../../api/apiTest'
 
 export default {
   props: ['inputData', 'hotelInfo', 'nearList'],

@@ -59,7 +59,7 @@
 </template>
 
 <script>
-import Api from '../../api/api'
+import Api from '../../api/apiTest'
 
 export default {
   name: 'CitySearch',

@@ -85,9 +85,13 @@ export default {
       this.$emit('submit', value)
     },
     addWish (item) {
+      alert('찜하기 막아놓음')
+      return
       window.EventBus.$emit('addWishHotel', item, this.inputData)
     },
     delWish (hotelId) {
+      alert('찜하기 막아놓음')
+      return
       window.EventBus.$emit('delWishHotel', hotelId)
     }
   },

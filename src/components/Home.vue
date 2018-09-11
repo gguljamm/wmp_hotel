@@ -57,8 +57,8 @@
         @recent-del="recentDel"
       ></recent-search>
     </div>
-    <iframe class="hide" v-if="iswmpapp" :src="wmpLoginUrl"></iframe>
-    <iframe class="hide" v-if="$route.name !== 'auth' && !iswmpapp" :src="loginCheckUrl"></iframe>
+    <!--<iframe class="hide" v-if="iswmpapp" :src="wmpLoginUrl"></iframe>-->
+    <!--<iframe class="hide" v-if="$route.name !== 'auth' && !iswmpapp" :src="loginCheckUrl"></iframe>-->
     <Footer
       :mid="mid"
       :isFromApp="isFromApp"
@@ -84,7 +84,7 @@ import Header from './Common/Header'
 import Footer from './Common/Navigator'
 import Error from './Common/Error'
 import Oops from './Common/Oops'
-import Api from '../api/api'
+import Api from '../api/apiTest'
 import Format from '../util/format'
 import Alert from './Common/Alert'
 import RecentSearch from './Common/RecentSearch'
@@ -101,7 +101,7 @@ const router = new Router({
       component: Search
     },
     {
-      path: '/hotelList/:destination/:checkin/:checkout/:adults/:children/:room/:popFlag(search|map|filter|sort|destination|date|option|image|recentSearch)?',
+      path: '/hotelList/:destination/:checkin/:checkout/:adults/:children/:room/:popFlag(search|filter|sort|destination|date|option|image|recentSearch)?',
       name: 'hotelList',
       component: HotelList
     },
@@ -171,8 +171,8 @@ export default {
       mapList: [],
       selectedHotel: {},
       listingCondition: 'list',
-      loginCheckUrl: Api.isLoginCheck(),
-      wmpLoginUrl: Api.wmpLoginUrl(),
+      loginCheckUrl: false,
+      wmpLoginUrl: false,
       format: Format,
       historyLength: 0,
       scrollDown: false,
@@ -436,6 +436,7 @@ export default {
   mounted () {
     window.EventBus.$on('popAlert', this.popAlert)
     window.EventBus.$on('getWishHotel', this.getWishHotel)
+    this.getWishHotel()
     window.EventBus.$on('addWishHotel', this.addWishHotel)
     window.EventBus.$on('delWishHotel', this.delWishHotel)
     window.EventBus.$on('change-select-num-from-map', this.changeSelectNumFromMap)

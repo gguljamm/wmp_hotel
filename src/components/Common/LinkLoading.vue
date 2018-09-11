@@ -60,7 +60,8 @@ export default {
     // }
     this.timeout = setTimeout(() => {
       this.timeout = null
-      window.location.replace(this.$route.params.linkUrl)
+      alert('아웃링크')
+      // window.location.replace(this.$route.params.linkUrl)
     }, this.loadingDelay)
   },
   destroyed () {

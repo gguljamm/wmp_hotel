@@ -100,7 +100,7 @@ export default {
       this.$emit('submit', this.hotelInfo)
     },
     exit (exitInfo) {
-      if (this.mid) {
+      if (!this.mid) {
         const obj = {
           checkin: this.inputData.checkin,
           checkout: this.inputData.checkout,
@@ -163,9 +163,13 @@ export default {
       }
     },
     addWish (item) {
+      alert('찜하기 막아놓음')
+      return
       window.EventBus.$emit('addWishHotel', item, this.inputData)
     },
     delWish (hotelId) {
+      alert('찜하기 막아놓음')
+      return
       window.EventBus.$emit('delWishHotel', hotelId)
     }
   },

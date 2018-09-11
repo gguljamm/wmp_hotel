@@ -101,7 +101,7 @@ import SearchInfo from './SearchInfo'
 import HotelListCard from './HotelListCard'
 import HotelListScroll from './HotelListScroll'
 import ImageListPopup from './ImageListPopup'
-import Api from '../../api/api'
+import Api from '../../api/apiTest'
 import Format from '../../util/format'
 
 export default {
@@ -441,6 +441,10 @@ export default {
       })
     },
     openPop (flag) {
+      if (flag === 'map') {
+        alert('맵막아놓음')
+        return
+      }
       this.$emit('open-pop', flag)
     },
     closePop () {

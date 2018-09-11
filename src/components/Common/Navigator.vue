@@ -32,7 +32,7 @@ export default {
       this.$emit('open-pop', 'recentSearch')
     },
     wishList () {
-      if (this.mid) {
+      if (!this.mid) {
         this.$router.push(
           `/wish${window.location.search}${window.location.hash}`
         )
@@ -44,6 +44,8 @@ export default {
       window.open('http://www-stg.wonder-shopping.com/mypage/reservation/?svc=hotel', '_self')
     },
     share () {
+      alert ('공유하기')
+      return
       let obj = {}
       if (this.$route.name === 'hotelList') {
         const period = Format.getBetweenDay(this.$route.params.checkin, this.$route.params.checkout)

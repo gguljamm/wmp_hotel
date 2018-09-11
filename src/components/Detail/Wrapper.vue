@@ -136,7 +136,7 @@ import Review from './Review'
 import HotelInfo from './HotelInfo'
 import Location from './Location'
 import ImageListPopup from '../HotelList/ImageListPopup'
-import Api from '../../api/api'
+import Api from '../../api/apiTest'
 import StaticFooter from '../Common/Footer'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
@@ -282,17 +282,21 @@ export default {
       }, 300)
     },
     addWish (item) {
+      alert('찜하기 막아놓음')
+      return
       window.EventBus.$emit('addWishHotel', item, this.inputData)
     },
     delWish (hotelId) {
+      alert('찜하기 막아놓음')
+      return
       window.EventBus.$emit('delWishHotel', hotelId)
     },
     changeTabNum (num) {
-      if (num === 2) {
-        // 후기 일단 막아놈
-        this.popAlert('준비중입니다.')
-        return
-      }
+      // if (num === 2) {
+      //   // 후기 일단 막아놈
+      //   this.popAlert('준비중입니다.')
+      //   return
+      // }
       this.tabNum = num
     },
     popAlert (message, event) {

@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import Api from '../../api/api'
+// import Api from '../../api/api'
 export default {
   props: ['alert'],
   methods: {
@@ -45,7 +45,8 @@ export default {
         const loginUrl = `/login/${encodeURIComponent(url)}`
         window.open(loginUrl, '_self')
       } else {
-        window.open(Api.isLoginCheck(encodeURIComponent(url)), '_self')
+        alert('로그인')
+        // window.open(Api.isLoginCheck(encodeURIComponent(url)), '_self')
       }
     },
     close () {

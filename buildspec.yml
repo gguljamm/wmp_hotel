@@ -27,9 +27,9 @@ phases:
   post_build:
     commands:
       - ok && echo Build completed on `date`
-      - ls -l ./dist
-      - aws s3 sync --cache-control max-age=86400 --exclude=index.html ./dist/ s3://tour-front-web/hms-front-web/mobile
-      - aws s3 sync --cache-control max-age=0  --include=index.html ./dist/ s3://tour-front-web/hms-front-web/mobile
+      - ls -l ./public
+      - aws s3 sync --cache-control max-age=86400 --exclude=index.html ./public/ s3://tour-front-web/hms-front-web/mobile
+      - aws s3 sync --cache-control max-age=0  --include=index.html ./public/ s3://tour-front-web/hms-front-web/mobile
 #artifacts:
   #files:
     # - location

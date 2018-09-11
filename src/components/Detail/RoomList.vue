@@ -93,7 +93,7 @@ export default{
       return arr
     },
     exit (exitInfo) {
-      if (this.mid) {
+      if (!this.mid) {
         const obj = {
           checkin: this.inputData.checkin,
           checkout: this.inputData.checkout,
